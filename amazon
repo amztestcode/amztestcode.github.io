@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Click Example</title>
+</head>
+<body>
+
+<a id="catLink" href="https://www.amazon.com/dp/B0CN1P5Z2G?&linkCode=sl1&tag=pootechguy-20&linkId=4b74599b69cc6a196f5b62960c692c8c&language=en_US&ref_=as_li_ss_tl" >Visit cat Cat.com</a>
+
+<script>
+    // Wait for 5 seconds after the page has loaded, then click the link
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById("catLink").click();
+        }, 5000); // 5000 milliseconds = 5 seconds
+    };
+</script>
+
+</body>
+</html>
