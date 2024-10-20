@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Click Example</title>
+    <meta name="description" content="Check out this great product that I found!">
+    <title>Your Product Is Here - Check It Out</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 min-h-screen grid place-items-center">
 
-<a id="catLink" href="https://amzn.to/48dJEvC" >Visit cat Cat.com</a>
+<!-- Container -->
+<div class="container mx-3 max-w-sm bg-white p-6 shadow-lg rounded-lg transition-transform duration-300 hover:scale-105 text-center">
+    <div class="grid grid-cols-1 gap-3">
+        <h1 class="text-gray-800 text-xl md:text-2xl font-serif tracking-wide mb-3">Hey! I found something I think you'll love.</h1>
+        
+        <!-- Product Image -->
+        <img src="https://m.media-amazon.com/images/I/71+lC5XIj2L._AC_SL1500_.jpg" alt="Product Image" class="w-full h-auto rounded-lg mb-4 transition-opacity duration-300 hover:opacity-90">
+        
+        <!-- Call to Action Buttons -->
+        <a href="https://amzn.to/48dJEvC" class="block bg-yellow-400 text-white text-lg font-medium py-3 rounded-full hover:bg-yellow-500 hover:shadow-lg transition-colors duration-300 mb-2">Take a Look on Amazon</a>
+        
+        <a href="https://amzn.to/48dJEvC" class="block mb-2 bg-gradient-to-r from-pink-400 to-purple-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl hover:from-purple-500 hover:to-pink-400 focus:ring-4 focus:ring-pink-300 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 animate-pulse">Take a Look on Amazon</a>
+        
+        <a href="https://amzn.to/48dJEvC" class="block mb-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl hover:from-yellow-500 hover:to-yellow-400 focus:ring-4 focus:ring-yellow-300 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">Take a Look on Amazon</a>
 
-<script>
-    // Wait for 5 seconds after the page has loaded, then click the link
-    window.onload = function() {
-        setTimeout(function() {
-            document.getElementById("catLink").click();
-        }, 5000); // 5000 milliseconds = 5 seconds
-    };
-</script>
+        <!-- Affiliate Disclaimer -->
+        <p class="text-sm text-gray-500 mt-2">*Just so you know, I might earn a small commission if you buy through this link—thanks for the support!</p>
+    </div>
+</div>
 
 </body>
 </html>
