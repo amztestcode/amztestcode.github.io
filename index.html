@@ -3,20 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Click Example</title>
+    <meta name="description" content="Check out this great product that I found!">
+    <title>Your Product Is Here - Check It Out</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .cta-button {
+                padding: 20px; /* Make the button larger for easier tapping on small screens */
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-<a id="catLink" href="https://www.amazon.com/dp/B0CN1P5Z2G?&linkCode=sl1&tag=pootechguy-20&linkId=4b74599b69cc6a196f5b62960c692c8c&language=en_US&ref_=as_li_ss_tl" >Visit cat Cat.com</a>
+<!-- Container -->
+<div class="container mx-3 max-w-sm bg-white p-8 shadow-lg rounded-lg transition-transform duration-300 hover:scale-105 text-center">
+    <div class="">
 
-<script>
-    // Wait for 5 seconds after the page has loaded, then click the link
-    window.onload = function() {
-        setTimeout(function() {
-            document.getElementById("catLink").click();
-        }, 5000); // 5000 milliseconds = 5 seconds
-    };
-</script>
+        <h1 class="text-gray-800 text-3xl font-serif tracking-wide mb-4">Hey! I found something I think you'll love.</h1>
+        
+        <!-- Product Image -->
+        <img src="https://m.media-amazon.com/images/I/71+lC5XIj2L._AC_SL1500_.jpg" alt="Product Image" class="w-full h-auto rounded-lg mb-6 transition-opacity duration-300 hover:opacity-90">
+        
+        <!-- Call to Action Button -->
+        <a href="https://www.amazon.com/dp/youraffiliateproductid?tag=youraffiliateid" target="_blank" class="cta-button block bg-yellow-400 text-white text-xl font-medium py-4 rounded-full hover:bg-yellow-500 hover:shadow-lg transition-colors duration-300">Take a Look on Amazon</a>
+        <button class="bg-gradient-to-r from-pink-400 to-purple-500 text-white font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-xl hover:from-purple-500 hover:to-pink-400 focus:ring-4 focus:ring-pink-300 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 animate-pulse">
+            Take a Look on Amazon
+                  </button>
+        <button class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-xl hover:from-yellow-500 hover:to-yellow-400 focus:ring-4 focus:ring-yellow-300 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+            Take a Look on Amazon
+        </button>
+                
+        
+        <!-- Affiliate Disclaimer -->
+        <p class="text-sm text-gray-500 mt-4">*Just so you know, I might earn a small commission if you buy through this link—thanks for the support!</p>
+    </div>
+    <!-- Product Title -->
+</div>
 
 </body>
 </html>
