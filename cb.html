@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Click Link Example</title>
+    <title>Auto Click Link with Focus and Delay Example</title>
 </head>
 <body>
-    <h1>Auto Click Link Example</h1>
+    <h1>Auto Click Link with Focus and Delay Example</h1>
     <!-- Example link with the target URL -->
     <a href="https://www.amazon.com/dp/B0CN1P5Z2G" id="autoClickLink">Visit Example.com</a>
 
     <script>
-        // Auto-click the link when the page loads
+        // Auto-click the link with focus and delay when the page loads
         window.onload = function() {
             const urlToClick = "https://www.amazon.com/dp/B0CN1P5Z2G";
             
             // Find the link with the matching href
             const link = document.querySelector(`a[href='${urlToClick}']`);
             
-            // Check if the link exists, then click it
+            // Check if the link exists, then set a timeout to focus and click it after 5 seconds
             if (link) {
-                link.click();
+                setTimeout(function() {
+                    link.focus(); // Bring the link into focus
+                    link.click(); // Trigger the click
+                }, 5000); // 5000 milliseconds = 5 seconds
             }
         };
     </script>
