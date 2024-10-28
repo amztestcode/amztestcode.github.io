@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Click Link Example</title>
+</head>
+<body>
+    <h1>Auto Click Link Example</h1>
+    <!-- Example link with the target URL -->
+    <a href="https://www.amazon.com/dp/B0CN1P5Z2G" id="autoClickLink">Visit Example.com</a>
+
+    <script>
+        // Auto-click the link when the page loads
+        window.onload = function() {
+            const urlToClick = "https://www.amazon.com/dp/B0CN1P5Z2G";
+            
+            // Find the link with the matching href
+            const link = document.querySelector(`a[href='${urlToClick}']`);
+            
+            // Check if the link exists, then click it
+            if (link) {
+                link.click();
+            }
+        };
+    </script>
+</body>
+</html>
